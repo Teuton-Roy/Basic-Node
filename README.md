@@ -11,3 +11,5 @@
 # What is nmp?
     nmp stands for node package manager.
 
+# why use [npm inti] command
+    This utility will walk us through creating a package.json file
