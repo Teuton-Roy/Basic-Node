@@ -23,14 +23,20 @@
 # To install Express temporarily and not add it to the dependencies list:
     $ npm install express --no-save
 
+#  How to uninstall express
+    $ npm uninstall express
+
 # What is nodemon?
     nodemon is a tool that helps develop Node.js based applications by automatically restarting the node application   when file changes in the directory are detected
 
 # Install nodemon in our system path globally:
-    npm install -g nodemon
+    $ npm install -g nodemon
 
 # Install nodemon as a development dependency:
-    npm install --save-dev nodemon
+    $ npm install --save-dev nodemon
+
+# How to uninstsll?
+    $ npm uninstall nodemon
 
 # After download nodemon in your system if you get error like [nodemon : File C:\Users\user\AppData\Roaming\npm\nodemon.ps1 cannot be loaded because running   scripts is disabled on this system. For more information, see about_Execution_Policies at   https:/go.microsoft.com/fwlink/?LinkID=135170.]
     1. Open PowerShell (Run As Administrator)  
