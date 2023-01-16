@@ -22,3 +22,13 @@
 
 # To install Express temporarily and not add it to the dependencies list:
     $ npm install express --no-save
+
+# What is nodemon?
+    nodemon is a tool that helps develop Node.js based applications by automatically restarting the node application when file changes in the directory are detected
+
+# Install nodemon in our system path globally:
+    npm install -g nodemon
+
+# lso install nodemon as a development dependency:
+    npm install --save-dev nodemon
+
