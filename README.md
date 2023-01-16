@@ -29,6 +29,6 @@
 # Install nodemon in our system path globally:
     npm install -g nodemon
 
-# lso install nodemon as a development dependency:
+# Install nodemon as a development dependency:
     npm install --save-dev nodemon
 
