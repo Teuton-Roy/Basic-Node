@@ -17,10 +17,24 @@ MyInfo = {
     Developer: 'true'
 }
 
+// console.log(exports, require, module, __filename, __dirname);
+
 module.exports = MyInfo;
 
 //Now we are going to import this MyInfo object in index.js//
 
 /*
     This [second.js] called [CommonJS module system] : which is refers some contant from this file and export it to another file.
+*/
+
+
+/*
+    What is module rapper function?
+    This is a function that wraps around the code of every single file in the node application.
+
+    (function(exports, require, module, __filename, __dirname){
+        //code goes here
+    })
+
+
 */
