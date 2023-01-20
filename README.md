@@ -64,4 +64,8 @@
     const Simple = require("./second.js");
     Simple();  
 
- 
+# How to use ES6 module?  
+    STEP-1: go to package.json file and add   "type":"module", after "author":"Teuton",  
+
+    STEP-2: add file name with mjs (first.mjs).  
+
