@@ -51,3 +51,17 @@
     5. Now try to run nodemon on your project  
         nodemon 'filename.js'  
         
+# How to import-export in CommonJS module?      
+    From second.js to first.js  
+    
+    (second.js)---
+    function Simple(){
+    console.log("Hello World");
+    }
+    module.exports = Simple;
+
+    (first.js)---
+    const Simple = require("./second.js");
+    Simple();  
+
+ 
