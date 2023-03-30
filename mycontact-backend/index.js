@@ -10,7 +10,7 @@ const port = process.env.PORT || 8080
 
 //create a route for the default URL
 
-app.use('/api/contacts', require('./routes/contactRoutes')) //app.use() is known as middleware function between the request and response
+app.use('/api/contacts', require('./routes/contactRoutes')) //app.use() is known as middleware function between the request and response 
 
 /*
 app.get('/api/contacts', (req, res) => {
