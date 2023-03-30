@@ -10,7 +10,8 @@ const port = process.env.PORT || 8080
 
 //create a route for the default URL
 app.get('/api/contacts', (req, res) => {
-    res.send('get all contacts')
+    // res.send('get all contacts')
+    res.status(200).json({message: 'get all contacts'})
 });
 
 //now we can have listen on the app on the port 8080
