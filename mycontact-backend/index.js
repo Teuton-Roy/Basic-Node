@@ -8,6 +8,11 @@ const app = express()
 //define a port (const port = 8080)
 const port = process.env.PORT || 8080
 
+//create a route for the default URL
+app.get('/api/contacts', (req, res) => {
+    res.send('get all contacts')
+});
+
 //now we can have listen on the app on the port 8080
 app.listen(port, () =>{ //callback function
     console.log(`Server is running on port ${port}`);
