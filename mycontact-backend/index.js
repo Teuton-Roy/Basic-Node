@@ -3,9 +3,15 @@ const express = require('express')
 const dotenv = require('dotenv').config()
 //import the error handler
 const errorHandler = require('./middleware/errorhandler')
+//import the database connection
+const connectDb = require('./config/dbConnection')
+
 
 //create an express app
 const app = express()
+
+//Call the database connection
+connectDb()
 
 //define a port (const port = 8080)
 const port = process.env.PORT || 8080
