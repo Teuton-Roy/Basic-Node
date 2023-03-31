@@ -16,6 +16,11 @@ const createContact = (req, res) => {
 //@Description: Get Contact
 //@Route: GET /api/contacts
 //@Access: Public
+
+/*
+params is a property of the request object.
+req.params.id is the id of the contact to be updated/delete/get etc.
+*/
 const getContact = (req, res) => {
     res.status(200).json({message: `Get contact for ${req.params.id}`})
 }

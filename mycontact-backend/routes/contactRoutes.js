@@ -22,10 +22,6 @@ router.route('/:id').get(getContact);
 
 
 //route for the put request to update a contact
-/*
-params is a property of the request object
-req.params.id is the id of the contact to be updated
-*/
 router.route('/:id').put(updateContact);
 
 
