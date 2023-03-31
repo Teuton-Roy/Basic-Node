@@ -1,10 +1,10 @@
 const express = require('express')
 const router = express.Router()
+//import the contact controller
+const getContact = require('../controllers/contactControllers')
 
 //config the routes
-router.route('/').get((req, res) => {
-    res.status(200).json({message: 'Get all contacts'})
-});
+router.route('/').get(getContact)
 
 //route for the post request to create a contact
 router.route('/').post((req, res) => {
