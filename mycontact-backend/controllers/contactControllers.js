@@ -14,7 +14,7 @@ const createContact = (req, res) => {
 }
 
 //@Description: Get Contact
-//@Route: GET /api/contacts
+//@Route: GET /api/contacts/:id
 //@Access: Public
 
 /*
@@ -26,14 +26,14 @@ const getContact = (req, res) => {
 }
 
 //@Description: Update Contact
-//@Route: PUT /api/contacts
+//@Route: PUT /api/contacts/:id
 //@Access: Public
 const updateContact = (req, res) => {
     res.status(200).json({message: `Update contact ${req.params.id}`})
 }
 
 //@Description: Delete Contact
-//@Route: DELETE /api/contacts
+//@Route: DELETE /api/contacts/:id
 //@Access: Public
 const deleteContact = (req, res) => {
     res.status(200).json({message: `Delete contact ${req.params.id}`})
