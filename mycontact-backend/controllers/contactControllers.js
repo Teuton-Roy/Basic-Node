@@ -1,5 +1,5 @@
 //import express-async-handler
-const expressAsyncHandler = require('express-async-handler')
+const asyncHandler = require('express-async-handler')
 
 //@Description: Get All Contacts
 //@Route: GET /api/contacts
