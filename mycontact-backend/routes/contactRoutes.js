@@ -13,8 +13,8 @@ router.route('/').post((req, res) => {
 
 
 //route for the get request for individual contact
-router.route('/').get((req, res) => {
-    res.status(200).json({message: `Get contact for $(req.params.id)`})
+router.route('/:id').get((req, res) => {
+    res.status(200).json({message: `Get contact for ${req.params.id}`})
 });
 
 
