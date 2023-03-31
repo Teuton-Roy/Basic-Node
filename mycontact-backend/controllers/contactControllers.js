@@ -1,7 +1,6 @@
 //@Description: Get All Contacts
 //@Route: GET /api/contacts
 //@Access: Public
-
 const getContacts =  (req, res) => {
     res.status(200).json({message: 'Get all contacts'})
 };
@@ -10,6 +9,7 @@ const getContacts =  (req, res) => {
 //@Route: POST /api/contacts
 //@Access: Public
 const createContact = (req, res) => {
+    console.log("The request body is: ", req.body);
     res.status(201).json({message: 'Create contact'})
 }
 
@@ -29,19 +29,27 @@ const getContact = (req, res) => {
 //@Route: PUT /api/contacts/:id
 //@Access: Public
 const updateContact = (req, res) => {
-    res.status(200).json({message: `Update contact ${req.params.id}`})
+    res.status(200).json({message: `Update contact for ${req.params.id}`})
 }
 
 //@Description: Delete Contact
 //@Route: DELETE /api/contacts/:id
 //@Access: Public
 const deleteContact = (req, res) => {
-    res.status(200).json({message: `Delete contact ${req.params.id}`})
+    res.status(200).json({message: `Delete contact for ${req.params.id}`})
 }
 
 //exprot the controller functions
-module.exports = getContacts
-module.exports = createContact
-module.exports = getContact
-module.exports = updateContact
-module.exports = deleteContact
+// module.exports = getContacts
+// module.exports = createContact
+// module.exports = getContact
+// module.exports = updateContact
+// module.exports = deleteContact
+
+module.exports = { 
+    getContacts, 
+    createContact, 
+    getContact, 
+    updateContact, 
+    deleteContact 
+}
