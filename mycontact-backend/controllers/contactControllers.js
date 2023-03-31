@@ -14,7 +14,7 @@ const createContact = (req, res) => {
     const {name, email, phone} = req.body
     if(!name || !email || !phone){
         res.status(400)
-        throw new Error('Please provide name, email and phone')
+        throw new Error('Please provide name, email and phone!')
     }
     res.status(201).json({message: 'Create contact'})
 }
