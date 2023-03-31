@@ -12,6 +12,7 @@ const updateContact = require('../controllers/contactControllers')
 //import the delete contact
 const deleteContact = require('../controllers/contactControllers')
 
+
 //config the routes
 router.route('/').get(getContacts)
 
