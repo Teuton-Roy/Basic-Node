@@ -4,7 +4,7 @@ const dotenv = require('dotenv').config()
 //import the error handler
 const errorHandler = require('./middleware/errorhandler')
 //import the database connection
-const connectDb = require('./config/dbConnection')
+const connectDb = require('./config/dbconnection')
 
 
 //create an express app
