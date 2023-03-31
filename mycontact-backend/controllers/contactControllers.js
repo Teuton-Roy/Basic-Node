@@ -32,8 +32,16 @@ const updateContact = (req, res) => {
     res.status(200).json({message: `Update contact ${req.params.id}`})
 }
 
+//@Description: Delete Contact
+//@Route: DELETE /api/contacts
+//@Access: Public
+const deleteContact = (req, res) => {
+    res.status(200).json({message: `Delete contact ${req.params.id}`})
+}
+
 //exprot the controller functions
 module.exports = getContacts
 module.exports = createContact
 module.exports = getContact
 module.exports = updateContact
+module.exports = deleteContact

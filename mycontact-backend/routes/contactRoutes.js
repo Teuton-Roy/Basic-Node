@@ -9,6 +9,8 @@ const createContact = require('../controllers/contactControllers')
 const getContact = require('../controllers/contactControllers')
 //import the update contact
 const updateContact = require('../controllers/contactControllers')
+//import the delete contact
+const deleteContact = require('../controllers/contactControllers')
 
 //config the routes
 router.route('/').get(getContacts)
@@ -26,9 +28,7 @@ router.route('/:id').put(updateContact);
 
 
 //route for the delete request to delete a contact
-router.route('/:id').delete((req, res) => {
-    res.status(200).json({message: `Delete contact ${req.params.id}`})
-});
+router.route('/:id').delete(deleteContact);
 
 //export the router
 module.exports = router
