@@ -10,6 +10,12 @@ const getContacts =  (req, res) => {
 //@Access: Public
 const createContact = (req, res) => {
     console.log("The request body is: ", req.body);
+    //Destructure the request body
+    const {name, email, phone} = req.body
+    if(!name || !email || !phone){
+        res.status(400)
+        throw new Error('Please provide name, email and phone')
+    }
     res.status(201).json({message: 'Create contact'})
 }
 
