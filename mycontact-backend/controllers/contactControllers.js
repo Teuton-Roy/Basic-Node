@@ -1,14 +1,14 @@
 //@Description: Get All Contacts
 //@Route: GET /api/contacts
 //@Access: Public
-const getContacts =  (req, res) => {
+const getContacts = async (req, res) => {
     res.status(200).json({message: 'Get all contacts'})
 };
 
 //@Description: create new Contacts
 //@Route: POST /api/contacts
 //@Access: Public
-const createContact = (req, res) => {
+const createContact = async (req, res) => {
     console.log("The request body is: ", req.body);
     //Destructure the request body
     const {name, email, phone} = req.body
@@ -27,21 +27,21 @@ const createContact = (req, res) => {
 params is a property of the request object.
 req.params.id is the id of the contact to be updated/delete/get etc.
 */
-const getContact = (req, res) => {
+const getContact =async (req, res) => {
     res.status(200).json({message: `Get contact for ${req.params.id}`})
 }
 
 //@Description: Update Contact
 //@Route: PUT /api/contacts/:id
 //@Access: Public
-const updateContact = (req, res) => {
+const updateContact = async (req, res) => {
     res.status(200).json({message: `Update contact for ${req.params.id}`})
 }
 
 //@Description: Delete Contact
 //@Route: DELETE /api/contacts/:id
 //@Access: Public
-const deleteContact = (req, res) => {
+const deleteContact = async (req, res) => {
     res.status(200).json({message: `Delete contact for ${req.params.id}`})
 }
 
