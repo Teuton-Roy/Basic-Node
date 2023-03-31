@@ -1,6 +1,8 @@
 //create s express server   
 const express = require('express')
 const dotenv = require('dotenv').config()
+//import the error handler
+const errorHandler = require('./middleware/errorhandler')
 
 //create an express app
 const app = express()
@@ -13,6 +15,9 @@ app.use(express.json()) //app.use() is known as middleware function between the 
 
 //create a route for the default URL
 app.use('/api/contacts', require('./routes/contactRoutes')) //app.use() is known as middleware function between the request and response 
+
+//use the midddleware function errorHandler
+app.use(errorHandler)
 
 /*
 app.get('/api/contacts', (req, res) => {
