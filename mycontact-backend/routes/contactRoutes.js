@@ -23,14 +23,14 @@ router.route('/:id').get((req, res) => {
 params is a property of the request object
 req.params.id is the id of the contact to be updated
 */
-router.route('/:id ').put((req, res) => {
+router.route('/:id').put((req, res) => {
     res.status(200).json({message: `Update contact ${req.params.id}`})
 });
 
 
 //route for the delete request to delete a contact
 router.route('/:id').delete((req, res) => {
-res.status(200).json({message: `Delete contact ${req.params.id}`})
+    res.status(200).json({message: `Delete contact ${req.params.id}`})
 });
 
 //export the router
