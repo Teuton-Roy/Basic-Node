@@ -6,10 +6,13 @@ const getContact =  (req, res) => {
     res.status(200).json({message: 'Get all contacts'})
 };
 
+//@Description: create new Contacts
+//@Route: POST /api/contacts
+//@Access: Public
 const createContact = (req, res) => {
-    res.status(200).json({message: 'Create contact'})
+    res.status(201).json({message: 'Create contact'})
 }
 
-//exprot the getContact function
+//exprot the controller functions
 module.exports = getContact
 module.exports = createContact
