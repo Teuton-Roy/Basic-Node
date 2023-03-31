@@ -8,8 +8,10 @@ const app = express()
 //define a port (const port = 8080)
 const port = process.env.PORT || 8080
 
-//create a route for the default URL
+//configure the express app to use json
+app.use(express.json()) //app.use() is known as middleware function between the request and response
 
+//create a route for the default URL
 app.use('/api/contacts', require('./routes/contactRoutes')) //app.use() is known as middleware function between the request and response 
 
 /*
