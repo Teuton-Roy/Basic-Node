@@ -16,13 +16,19 @@ const getContacts =asyncHandler(async (req, res) => {
 //@Access: Public
 const createContact = asyncHandler(async (req, res) => {
     console.log("The request body is: ", req.body);
-    //Destructure the request body
+    //Destructure the request body. If name, email and phone any one missing then it is occured
     const {name, email, phone} = req.body
     if(!name || !email || !phone){
         res.status(400)
         throw new Error('Please provide name, email and phone!')
     }
-    res.status(201).json({message: 'Create contact'})
+    //If all the fields are present then create a new contact
+    const contact = await Contact.create({
+        name,
+        email,
+        phone,
+    })
+    res.status(201).json(contact)
 })
 
 //@Description: Get Contact
