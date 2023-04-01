@@ -40,7 +40,7 @@ params is a property of the request object.
 req.params.id is the id of the contact to be updated/delete/get etc.
 */
 const getContact =asyncHandler  (async (req, res) => {
-    //get invidual contact by id
+    //get individual contact by id
     const contact = await Contact.findById(req.params.id)
     //if don't find any contact then throw a error
     if(!contact){
