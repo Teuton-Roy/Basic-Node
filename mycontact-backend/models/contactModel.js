@@ -15,7 +15,11 @@ const contactSchema = new mongoose.Schema({
         type: String,
         required: [true, "Please provide a phone number"],
     },
-}, timeStamps = true);
+}, 
+{
+    timeStamps: true
+}
+);
 
 
 
