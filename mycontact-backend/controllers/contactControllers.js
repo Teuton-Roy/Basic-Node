@@ -54,7 +54,19 @@ const getContact =asyncHandler  (async (req, res) => {
 //@Route: PUT /api/contacts/:id
 //@Access: Public
 const updateContact = asyncHandler (async (req, res) => {
-    res.status(200).json({message: `Update contact for ${req.params.id}`})
+    //inorder to update a contact first fatch the contact
+    const contact = await Contact.findById(req.params.id)
+    if(!contact){
+        res.status(404)
+        throw new Error('Contact not found!')
+    }
+    //if contact is found then update the contact
+    const updatedContact = await Contact.findByIdAndUpdate(
+        req.params.id,
+        req.body,
+        {new: true}
+    )
+    res.status(200).json(updatedContact)
 })
 
 //@Description: Delete Contact
