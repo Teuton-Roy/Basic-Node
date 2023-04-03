@@ -1,5 +1,5 @@
 //import constants
-const constants = require('../routes/constants')
+const constants = require('../constants')
 
 //create constant error handler
 const errorHandler = (err, req, res, next) => {
