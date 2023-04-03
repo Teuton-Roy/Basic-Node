@@ -15,7 +15,7 @@ router.post('/login', (req, res) => {
 })
 
 //current user route
-router.post('/current', (req, res) => {  
+router.get('/current', (req, res) => {  
     res.json({message: 'Get the current user'})
 })
 
