@@ -4,6 +4,8 @@ const asyncHandler = require('express-async-handler')
 const User = require('../models/userModel')
 //import bcrypt for password hashing
 const bcrypt = require('bcrypt')
+//import jsonwebtoken for token generation
+const jwt = require('jsonwebtoken')
 
 //@Description: Register a new user
 //@Route: POST /api/users/register
@@ -56,7 +58,35 @@ const registerUser = asyncHandler(async (req, res) => {
 //@Route: POST /api/users/login
 //@Access: Public
 const loginUser = asyncHandler(async (req, res) => {
-    res.json({message: 'Login the user'})
+    //fetch the email and password from the request body
+    const {email, password} = req.body
+    //check if the email and password are provided
+    if(!email || !password){
+        res.status(400)
+        throw new Error('Please provide email and password')
+    }
+    //check if the user exists in the database
+    const user = await User.findOne({email})
+    //now compare the password in the database with the password provided by the user
+    if(user && (await bcrypt.compare(password, user.password))){
+        //if the password matches, generate a token
+        const accessToken = jwt.sign({
+            user:{
+                name: user.username,
+                email: user.email,
+                _id: user._id
+            },
+        },
+            process.env.ACCESS_TOKEN_SECERT, 
+            {expiresIn: '1m'}
+        )
+        //send the token to the client
+        res.status(200).json({accessToken})
+    }else{
+        res.status(401)
+        throw new Error('Invalid email or password')
+    }
+    // res.json({message: 'Login the user'})
 })
 
 //@Description: Current a new user
@@ -73,3 +103,7 @@ module.exports = {
     currentUser
     }
 
+/* 
+  "email":"aaaa@gmail.com",
+  "password":"Teuton@9041"
+*/
