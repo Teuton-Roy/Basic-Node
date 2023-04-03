@@ -94,7 +94,7 @@ const loginUser = asyncHandler(async (req, res) => {
 //@Access: Private
 const currentUser = asyncHandler(async (req, res) => {
     //To access this endpoint, clint has to pass an access token so only authenticated users can acces the route
-    res.json({message: 'Get the current user'})
+    res.json(req.user)
 })
 
 //export the userControllers
