@@ -102,8 +102,3 @@ module.exports = {
     loginUser,
     currentUser
     }
-
-/* 
-  "email":"aaaa@gmail.com",
-  "password":"Teuton@9041"
-*/
