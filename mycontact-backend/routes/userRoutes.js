@@ -2,6 +2,8 @@
 const express = require('express')
 //import userControllers
 const {registerUser,loginUser,currentUser} = require('../controllers/userControllers')
+//import the validateToken
+const validateToken = require('../middleware/ValidateTokenHandler')
 
 //router
 const router = express.Router()
@@ -13,7 +15,7 @@ router.post('/register',registerUser)
 router.post('/login', loginUser)
 
 //current user route
-router.get('/current', currentUser)
+router.get('/current', validateToken, currentUser)
 
 
 //export the router

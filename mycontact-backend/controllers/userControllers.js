@@ -78,7 +78,7 @@ const loginUser = asyncHandler(async (req, res) => {
             },
         },
             process.env.ACCESS_TOKEN_SECERT, 
-            {expiresIn: '1m'}
+            {expiresIn: '1h'}
         )
         //send the token to the client
         res.status(200).json({accessToken})
@@ -91,8 +91,9 @@ const loginUser = asyncHandler(async (req, res) => {
 
 //@Description: Current a new user
 //@Route: GET /api/users/current
-//@Access: Public
+//@Access: Private
 const currentUser = asyncHandler(async (req, res) => {
+    //To access this endpoint, clint has to pass an access token so only authenticated users can acces the route
     res.json({message: 'Get the current user'})
 })
 
