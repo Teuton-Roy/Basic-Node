@@ -1,23 +1,19 @@
 //import express
 const express = require('express')
+//import userControllers
+const {registerUser,loginUser,currentUser} = require('../controllers/userControllers')
 
 //router
 const router = express.Router()
 
 //register route
-router.post('/register', (req, res) => {
-    res.json({message: 'Register the user'})
-})
+router.post('/register',registerUser)
 
 //login route
-router.post('/login', (req, res) => {
-    res.json({message: 'Login the user'})
-})
+router.post('/login', loginUser)
 
 //current user route
-router.get('/current', (req, res) => {  
-    res.json({message: 'Get the current user'})
-})
+router.get('/current', currentUser)
 
 
 //export the router
