@@ -20,7 +20,10 @@ const port = process.env.PORT || 8080
 app.use(express.json()) //app.use() is known as middleware function between the request and response
 
 //create a route for the default URL
-app.use('/api/contacts', require('./routes/contactRoutes')) //app.use() is known as middleware function between the request and response 
+app.use('/api/contacts', require('./routes/contactRoutes')) //app.use() is known as middleware function between the request and response
+
+//routing for Authentication
+app.use('/api/users', require('./routes/userRoutes')) //app.use() is known as middleware function between the request and response 
 
 //use the midddleware function errorHandler
 app.use(errorHandler)
