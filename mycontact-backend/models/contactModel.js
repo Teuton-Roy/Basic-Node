@@ -1,6 +1,7 @@
 //import mongoose
 const mongoose = require('mongoose')
 
+
 //create schema
 const contactSchema = new mongoose.Schema({
     //user id and this id will be for the user who created the contact
