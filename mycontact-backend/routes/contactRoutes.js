@@ -14,6 +14,11 @@ const router = express.Router()
 
 //import all controller functions
 const {getContacts, createContact, getContact, updateContact, deleteContact} = require('../controllers/contactControllers')
+//import the validateToken
+const validateToken = require('../middleware/ValidateTokenHandler')
+
+//ValidateToken
+router.use(validateToken)
 
 //config the routes
 router.route('/').get(getContacts)
