@@ -6,7 +6,7 @@ const jwt = require('jsonwebtoken')
 const validateToken = asyncHandler(async (req, res, next) => {
     let token
     //check if the token is available in the request header
-    let authHeader = req.headers.authorization || req.headers.Authorization
+    let authHeader = req.headers.Authorization || req.headers.authorization
 
     if(authHeader && authHeader.startsWith('Bearer')){
         token = authHeader.split(' ')[1]
