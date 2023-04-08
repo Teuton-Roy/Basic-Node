@@ -1,15 +1,15 @@
 const express = require('express')
 const router = express.Router()
 
-// //import the get contacts
+//import the get contacts
 // const getContacts = require('../controllers/contactControllers')
-// //import the create contact
+//import the create contact
 // const createContact = require('../controllers/contactControllers')
-// //import the get contact
+//import the get contact
 // const getContact = require('../controllers/contactControllers')
-// //import the update contact
+//import the update contact
 // const updateContact = require('../controllers/contactControllers')
-// //import the delete contact
+//import the delete contact
 // const deleteContact = require('../controllers/contactControllers')
 
 //import all controller functions
