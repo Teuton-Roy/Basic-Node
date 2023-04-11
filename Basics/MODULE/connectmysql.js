@@ -18,3 +18,13 @@ database.connect((err) => {
         console.warn('Connected to database')
     }
 })
+
+//fetch data from database
+database.query('SELECT * FROM test', (err, result) => {
+    if(err){
+        console.warn('Error fetching data from database');
+    }
+    else{
+        console.warn(result);
+    }
+})
