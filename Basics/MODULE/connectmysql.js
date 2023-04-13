@@ -19,7 +19,6 @@ database.connect((err) => {
     }
 })
 
-
 //fetch data from database
 database.query('SELECT * FROM test', (err, result) => {
     if(err){
