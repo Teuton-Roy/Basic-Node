@@ -17,7 +17,7 @@ database.connect((err) => {
     else{
         console.warn('Connected to database')
     }
-})
+});
 
 //fetch data from database
 database.query('SELECT * FROM test', (err, result) => {
@@ -27,4 +27,4 @@ database.query('SELECT * FROM test', (err, result) => {
     else{
         console.warn(result);
     }
-})
+});
