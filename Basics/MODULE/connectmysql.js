@@ -29,3 +29,4 @@ database.query('SELECT * FROM test', (err, result) => {
         console.warn(result);
     }
 });
+
