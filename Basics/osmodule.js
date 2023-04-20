@@ -1,5 +1,4 @@
 //import os module//
-
 const os = require('os');
 
 //using some of the methods//
