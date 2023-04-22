@@ -12,6 +12,7 @@ console.log(os.hostname()); //this will give the hostname of the system//
 
 console.log(os.networkInterfaces()); //this will give the network interfaces of the system//
 
+
 console.log(os.platform()); //this will give the platform of the system//
 
 console.log(os.release()); //this will give the release of the system//
