@@ -2,7 +2,7 @@
 const express = require('express')
 const dotenv = require('dotenv').config()
 //import the error handler
-const errorHandler = require('./middleware/errorhandler')
+const errorHandler = require('./middleware/errorHandler')
 //import the database connection
 const connectDb = require('./config/dbconnection')
 
