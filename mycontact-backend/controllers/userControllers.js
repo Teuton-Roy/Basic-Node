@@ -41,7 +41,7 @@ const registerUser = asyncHandler(async (req, res) => {
     //if the user is created successfully, send the response
     if(user){
         res.status(201).json({
-            _id: user._id,
+            _id: user.id,
             username: user.username,
             email: user.email,
             // isAdmin: user.isAdmin,
