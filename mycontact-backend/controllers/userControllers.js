@@ -72,9 +72,9 @@ const loginUser = asyncHandler(async (req, res) => {
         //if the password matches, generate a token
         const accessToken = jwt.sign({
             user:{
-                name: user.username,
+                username: user.username,
                 email: user.email,
-                _id: user._id
+                id: user.id
             },
         },
             process.env.ACCESS_TOKEN_SECERT, 
@@ -88,7 +88,7 @@ const loginUser = asyncHandler(async (req, res) => {
     }
     // res.json({message: 'Login the user'})
 })
-
+ 
 //@Description: Current a new user
 //@Route: GET /api/users/current
 //@Access: Private
