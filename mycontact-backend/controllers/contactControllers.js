@@ -88,6 +88,12 @@ const deleteContact = asyncHandler (async (req, res) => {
         res.status(404)
         throw new Error('Contact not found!')
     }
+     //before delete check if the contact is available or not
+     if(contact.user_id.toString() !== req.user.id){
+        res.status(403)
+        throw new Error('You are not authorized to delete this contact!')
+    }
+
     //if contact is available then remove
     const deletedContact = await Contact.findByIdAndDelete(
         req.params.id,
