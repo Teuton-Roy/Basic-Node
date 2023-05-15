@@ -20,6 +20,7 @@ const validateToken = require('../middleware/ValidateTokenHandler')
 //ValidateToken
 router.use(validateToken)
 
+
 //config the routes
 router.route('/').get(getContacts)
 
