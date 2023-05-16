@@ -14,6 +14,13 @@
     let Promise = new Promise(function(resolve, reject){
         // executor (the producing code)
     })
+
+    Properties:
+    In promise object, there are 2 properties:
+
+    1. State: Initially panding, then changes to either "fulfiled" when resolve is called or "rejected" when reject is called.
+
+    2. Result: Initially undefined, then changes to either "value" when resolve(value) called or "error" when reject(error) called.
 */
 
 
