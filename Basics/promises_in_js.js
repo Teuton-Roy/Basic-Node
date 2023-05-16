@@ -15,3 +15,18 @@
         // executor (the producing code)
     })
 */
+
+
+let promise = new Promise(function(resolve, reject){
+    resolve(56)
+})
+
+
+console.log('Hello, Teuton 1st')
+
+setTimeout(function(){
+    console.log("Hola, Teuton after 2 seconds 2nd")
+},2000)
+
+console.log("My name is Teuton Roy, and I am a Web Developer 3rd")
+console.log(promise)
