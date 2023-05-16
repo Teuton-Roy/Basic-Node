@@ -9,4 +9,9 @@
     Promise is a promise of code excution, that, it will be executed in future.
     The code either executed successfully or failed. 
     In both the cases, the user will be notified.
+
+    Syntax:
+    let Promise = new Promise(function(resolve, reject){
+        // executor (the producing code)
+    })
 */
