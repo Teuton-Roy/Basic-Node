@@ -26,6 +26,13 @@ promise.then((value) => {
 })
 
 //.catch()
-promise1.catch((error) => {
+// promise1.catch((error) => {
+//     console.log('somthing went wrong in Promise1');
+// })
+
+//.then() and .catch() together
+promise1.then((value) => {
+    console.log(value)
+}, (error) => {
     console.log('somthing went wrong in Promise1');
 })
