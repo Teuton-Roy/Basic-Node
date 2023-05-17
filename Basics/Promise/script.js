@@ -1,5 +1,9 @@
 let promise = new Promise(function(resolve, reject){
+    
+    console.log("Promise is in pending state")
     setTimeout(()=>{
-        alert('I am in Promise and I am resolve')
+        console.log('I am in Promise and I am resolve')
+        resolve(true)
     },5000)
 })
+console.log(promise)
